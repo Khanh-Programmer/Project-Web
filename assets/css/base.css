@@ -11,6 +11,9 @@ body {
   font-family: var(--font);
   margin: 0;
 }
+html {
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
 }

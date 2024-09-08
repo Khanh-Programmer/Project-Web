@@ -9,6 +9,7 @@
 .header .inner-main {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 25px 30px;
   border-radius: 45px;
@@ -37,6 +38,19 @@
 }
 .header .inner-menu ul li a.active {
   color: var(--color-two);
+}
+.header .inner-icon-mobi {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .header .inner-menu {
+    display: none;
+  }
+  .header .inner-icon-mobi {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
 /* End-Header */
 
@@ -70,6 +84,14 @@
   color: var(--color-text);
   font-size: 16px;
   margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .section-one .inner-title {
+    font-size: 20px;
+  }
+  .section-one .inner-desc {
+    font-size: 12px;
+  }
 }
 /* End-Section-one */
 
@@ -126,6 +148,7 @@
   padding: 25px;
   text-align: center;
   border-radius: 15px;
+  margin-bottom: 35px;
 }
 .section-two .inner-box .inner-icon {
   width: 80px;
@@ -156,6 +179,11 @@
 .section-two .inner-box .inner-desc {
   font-size: 15px;
 }
+@media (max-width: 991.98px) {
+  .section-two {
+    margin-top: 0px;
+  }
+}
 /* End-Section-two */
 
 /* Section-three */
@@ -184,6 +212,11 @@
   padding-bottom: 50px;
   /* cach phan content vs cai border-bottom */
   margin-bottom: 80px;
+}
+@media (max-width: 991.98px) {
+  .section-three .inner-image {
+    margin-bottom: 20px;
+  }
 }
 /* End-Section-three */
 
@@ -244,6 +277,7 @@
   border-radius: 20px;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  margin-right: 0px;
 }
 .section-five .inner-box:hover {
   cursor: pointer;
@@ -265,6 +299,23 @@
 }
 .section-five .inner-box .inner-desc {
   font-size: 15px;
+}
+@media (max-width: 1199.98px) {
+  .section-five .inner-box {
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    width: 150px;
+    height: 180px;
+    padding: 25px 25px;
+    background: #121212;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  @media (max-width: 991.98px) {
+    .section-five .inner-box {
+      margin-bottom: 15px;
+    }
+  }
 }
 /* End-Section-five */
 
@@ -292,7 +343,7 @@
 .section-six .inner-box {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 20px;
   padding: 15px 20px;
   text-align: center;
@@ -326,6 +377,13 @@
   font-size: 15px;
   color: var(--color-two);
 }
+@media (max-width: 991.98px) {
+  .section-six .inner-box {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
+}
 /* End-Section-six */
 
 /* Section-seven */
@@ -336,6 +394,7 @@
 }
 .section-seven .inner-main {
   margin-bottom: 70px;
+  text-align: center;
 }
 .section-seven .inner-main .inner-title {
   font-size: 32px;
@@ -365,7 +424,7 @@
   margin-bottom: 10px;
 }
 .section-seven .inner-box .inner-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 15px;
@@ -386,6 +445,11 @@
 }
 .section-seven .inner-box .inner-menu .inner-underline {
   text-decoration: line-through;
+}
+@media (max-width: 991.98px) {
+  .section-seven .inner-box {
+    margin-bottom: 15px;
+  }
 }
 /* End-Section-seven */
 
@@ -428,6 +492,12 @@
 .section-eleven .inner-box .inner-title {
   font-size: 18px;
   font-weight: 600;
+}
+@media (max-width: 1199.98px) {
+  .section-eleven .inner-box::before {
+    content: "";
+    display: none;
+  }
 }
 /* End-Section-eleven */
 
@@ -480,6 +550,11 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media (max-width: 991.98px) {
+  .section-eight .inner-box {
+    margin-bottom: 20px;
+  }
+}
 /* End-Section-eight */
 
 /* Section-nine */
@@ -527,14 +602,23 @@
   border-radius: 25px;
   padding: 20px 10px;
   width: 100%;
-  height: 50px;
+  height: 30px;
 }
 .section-nine .inner-form .inner-child-form .form-group {
   border: 2px solid;
   border-radius: 25px;
-  width: 750px;
-  height: 200px;
-  padding: 20px 10px;
+  width: 100%;
+  padding: 10px;
+  height: 150px;
+}
+.section-nine .inner-child-form input,
+.section-nine .inner-child-form textarea {
+  outline: #ffffff;
+}
+@media (max-width: 767.98px) {
+  .section-nine .inner-box {
+    margin-bottom: 20px;
+  }
 }
 /* End-Section-nine */
 
@@ -576,7 +660,7 @@
 .section-ten .inner-menu ul li a:hover {
   background: var(--color-two);
 }
-.section-ten .inner-menu ul li a i:hover {
+.section-ten .inner-menu ul li:hover a i {
   color: #ffffff;
 }
 .section-ten .inner-border {
@@ -588,5 +672,5 @@
   font-size: 18px;
   color: #ffffff;
 }
-/* .outline => form khi click chuot */
+
 /* End-Section-ten  */
